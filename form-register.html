@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>JETC</title>
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container">
+
+      <!-- Main Container -->
+      <main id="main-container">
+
+        <!-- Page Content -->
+        <div class="bg-image" style="background-image: url('assets/media/photos/...jpg');">
+          <div class="row g-0 justify-content-center bg-black-10">
+            <div class="hero-static col-sm-8 col-md-6 col-xl-4 d-flex align-items-center p-2 px-sm-0">
+              <!-- Sign Up Block -->
+              <div class="block block-transparent block-rounded w-100 mb-0 overflow-hidden">
+                <div class="block-content block-content-full px-lg-5 px-xl-6 py-4 py-md-5 py-lg-6 bg-body-extra-light">
+                  <!-- Header -->
+                  <div class="mb-2 text-center">
+                    <a class="link-fx fw-bold fs-1" href="index.html">
+                      <span class="text-dark">JET</span><span class="text-primary">Centre</span>
+                    </a>
+                    <p class="text-uppercase fw-bold fs-sm text-muted">Formulir Registrasi</p>
+                  </div>
+                  <!-- END Header -->
+
+                  <!-- Sign Up Form -->
+                  <!-- jQuery Validation (.js-validation-signup class is initialized in js/pages/op_auth_signup.min.js which was auto compiled from _js/pages/op_auth_signup.js) -->
+                  <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
+                  <form class="js-validation-signup" action="be_pages_auth_all.html" method="POST">
+                
+                        <div class="form-floating mb-4">
+                          <input type="text" class="form-control" id="example-text-input-floating" name="example-text-input-floating" placeholder="Nama Lengkap">
+                          <label class="form-label" for="example-text-input-floating">Nama Lengkap</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="whatsapp" class="form-control" id="example-whatsapp-input-floating" name="example-whatsapp-input-floating" placeholder="Nomor WhatsApp">
+                            <label class="form-label" for="example-password-input-floating">Nomor WhatsApp</label>
+                          </div>
+                        <div class="form-floating mb-4">
+                          <input type="email" class="form-control" id="example-email-input-floating" name="example-email-input-floating" placeholder="Email Aktif">
+                          <label class="form-label" for="example-email-input-floating">Email Aktif</label>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                          <select class="form-select" id="example-select-floating" name="example-select-floating" aria-label="Floating label select example">
+                            <option selected="">Pilih Jenis Kelamin</option>
+                            <option value="1">Pria</option>
+                            <option value="2">Wanita</option>
+                          </select>
+                          <label class="form-label" for="example-select-floating">Jenis Kelamin</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <select class="form-select" id="program" name="program" aria-label="Floating label select example">
+                                <option selected="">Pilih Program</option>
+                                <option value="1">Kids</option>
+                                <option value="2">Preteen</option>
+                                <option value="2">Teen</option>
+                            </select>
+                            <label class="form-label" for="example-select-floating">Program</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                        <select class="form-select" id="example-select-floating" name="example-select-floating" aria-label="Floating label select example">
+                            <option selected="">Pilih Metode Belajar</option>
+                            <option value="1">Kelas Online</option>
+                            <option value="2">Kelas Offline</option>
+                        </select>
+                        <label class="form-label" for="example-select-floating">Metode Belajar</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <select class="form-select" id="example-select-floating" name="example-select-floating" aria-label="Floating label select example">
+                                <option selected="">Pilih</option>
+                                <option value="1">Google</option>
+                                <option value="2">Instagram</option>
+                                <option value="2">Facebook</option>
+                                <option value="2">Rekomendasi Teman</option>
+                            </select>
+                            <label class="form-label" for="example-select-floating">Tahu JET dari</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="example-email-input-floating" name="example-email-input-floating" placeholder="Masukan Kode Voucher">
+                                <label class="form-label" for="example-email-input-floating">Kode Voucher</label>
+                              </div>
+
+                              <div class="d-grid gap-2">
+                                <button class="btn btn-lg btn-primary" type="button">Submit</button>
+                              </div>
+                        
+                  </form>
+                  <!-- END Sign Up Form -->
+                </div>
+              </div>
+            </div>
+            <!-- END Sign Up Block -->
+          </div>
+
+          
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for jQuery Validation plugin) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/op_auth_signup.min.js"></script>
+  </body>
+</html>
