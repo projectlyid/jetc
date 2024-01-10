@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
     <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/sweetalert2/sweetalert2.min.css">
   </head>
 
   <body>
@@ -148,167 +150,95 @@
       <!-- Main Container -->
       <main id="main-container">
 
-        <!-- Analytics -->
+        <!-- Page Content -->
         <div class="content">
-          <div class="row items-push">
+            <!-- Elements -->
+            <div class="block block-rounded">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Add User</h3>
+              </div>
+              <div class="block-content">
+                <form action="be_forms_elements.html" method="POST" enctype="multipart/form-data" onsubmit="return false;">
+                  <!-- Basic Elements -->
+                  <h2 class="content-heading pt-0">User Selected Only</h2>
+                  <div class="row push">
+                    <div class="col-lg-4">
+                      <p class="text-muted">
+                        Formulir untuk tambah student
+                      </p>
+                    </div>
+                    <div class="col-lg-8 col-xl-5">
+                      
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="example-text-input-floating" name="example-text-input-floating" placeholder="Nama Lengkap">
+                            <label class="form-label" for="example-text-input-floating">Nama Lengkap</label>
+                          </div>
+                          <div class="form-floating mb-4">
+                              <input type="whatsapp" class="form-control" id="example-whatsapp-input-floating" name="example-whatsapp-input-floating" placeholder="Nomor WhatsApp">
+                              <label class="form-label" for="example-password-input-floating">Nomor WhatsApp</label>
+                            </div>
+                          <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="example-email-input-floating" name="example-email-input-floating" placeholder="Email Aktif">
+                            <label class="form-label" for="example-email-input-floating">Email Aktif</label>
+                          </div>
+                          
+                          <div class="form-floating mb-4">
+                            <select class="form-select" id="example-select-floating" name="example-select-floating" aria-label="Floating label select example">
+                              <option selected="">Pilih Jenis Kelamin</option>
+                              <option value="1">Pria</option>
+                              <option value="2">Wanita</option>
+                            </select>
+                            <label class="form-label" for="example-select-floating">Jenis Kelamin</label>
+                          </div>
+  
+                          <div class="form-floating mb-4">
+                              <select class="form-select" id="program" name="program" aria-label="Floating label select example">
+                                  <option selected="">Pilih Program</option>
+                                  <option value="1">Kids</option>
+                                  <option value="2">Preteen</option>
+                                  <option value="2">Teen</option>
+                              </select>
+                              <label class="form-label" for="example-select-floating">Program</label>
+                          </div>
+  
+                          <div class="form-floating mb-4">
+                          <select class="form-select" id="example-select-floating" name="example-select-floating" aria-label="Floating label select example">
+                              <option selected="">Pilih Metode Belajar</option>
+                              <option value="1">Kelas Online</option>
+                              <option value="2">Kelas Offline</option>
+                          </select>
+                          <label class="form-label" for="example-select-floating">Metode Belajar</label>
+                          </div>
+  
+                          <div class="form-floating mb-4">
+                              <select class="form-select" id="example-select-floating" name="example-select-floating" aria-label="Floating label select example">
+                                  <option selected="">Pilih</option>
+                                  <option value="1">Google</option>
+                                  <option value="2">Instagram</option>
+                                  <option value="2">Facebook</option>
+                                  <option value="2">Rekomendasi Teman</option>
+                              </select>
+                              <label class="form-label" for="example-select-floating">Tahu JET dari</label>
+                              </div>
+  
+                              <div class="form-floating mb-4">
+                                  <input type="text" class="form-control" id="example-email-input-floating" name="example-email-input-floating" placeholder="Masukan Kode Voucher">
+                                  <label class="form-label" for="example-email-input-floating">Kode Voucher</label>
+                                </div>
+  
+                                <div class="d-grid gap-2">
+                                  <button class="btn btn-lg btn-primary" type="button">Submit</button>
+                                </div>
 
-            <div class="col-sm-6 col-xl-3">
-              <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
-                <div class="block-content block-content-full flex-grow-1">
-                  <div class="item rounded-3 bg-body mx-auto my-3">
-                    <i class="fa fa-users fa-lg text-primary"></i>
+                    </div>
                   </div>
-                  <div class="fs-1 fw-bold">1.234</div>
-                  <div class="text-muted mb-3">Siswa Terdaftar</div>
-                </div>
+                  
+                </form>
               </div>
             </div>
-
-            <div class="col-sm-6 col-xl-3">
-              <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
-                <div class="block-content block-content-full flex-grow-1">
-                  <div class="item rounded-3 bg-body mx-auto my-3">
-                    <i class="fa fa-level-up-alt fa-lg text-primary"></i>
-                  </div>
-                  <div class="fs-1 fw-bold">1.234</div>
-                  <div class="text-muted mb-3">Siswa Lulus</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-xl-3">
-              <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
-                <div class="block-content block-content-full flex-grow-1">
-                  <div class="item rounded-3 bg-body mx-auto my-3">
-                    <i class="fa fa-chart-line fa-lg text-primary"></i>
-                  </div>
-                  <div class="fs-1 fw-bold">123</div>
-                  <div class="text-muted mb-3">Transaksi Sukses</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-xl-3">
-              <div class="block block-rounded text-center d-flex flex-column h-100 mb-0">
-                <div class="block-content block-content-full">
-                  <div class="item rounded-3 bg-body mx-auto my-3">
-                    <i class="fa fa-wallet fa-lg text-primary"></i>
-                  </div>
-                  <div class="fs-1 fw-bold">123</div>
-                  <div class="text-muted mb-3">Siswa Belum Terkonfirmasi</div>
-                </div>
-              </div>
-            </div>
+            <!-- END Elements -->
           </div>
-<!-- END Analytics -->
-
-<div class="block block-rounded">
-    <div class="block-header block-header-default">
-      <h3 class="block-title">Data Siswa</h3>
-      <div class="block-options">
-
-      </div>
-    </div>
-    <div class="block-content">
-      <table class="table table-hover table-vcenter">
-        <thead>
-          <tr>
-            <th class="text-center" style="width: 50px;">#</th>
-            <th>Name</th>
-            <th>Status</th>
-            <th class="d-none d-sm-table-cell" style="width: 15%;">Kelas</th>
-            <th class="d-none d-sm-table-cell" style="width: 15%;">Kelas</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-          
-          <tr>
-            <th class="text-center" scope="row">1</th>
-            <td class="fw-semibold">
-              <a href="be_pages_generic_profile.html">Amanda Powell</a>
-            </td>
-            <td class="d-none d-sm-table-cell">
-              <span class="badge bg-success">VIP</span>
-            </td>
-            <td class="d-none d-sm-table-cell">
-                <span class="badge bg-success">VIP</span>
-              </td>
-            <td class="d-none d-sm-table-cell">
-                <span class="badge bg-info">Business</span>
-              </td>
-            <td class="text-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit">
-                  <i class="fa fa-pencil-alt"></i>
-                </button>
-                <button type="button" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete">
-                  <i class="fa fa-times"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th class="text-center" scope="row">2</th>
-            <td class="fw-semibold">
-              <a href="be_pages_generic_profile.html">Sara Fields</a>
-            </td>
-            <td class="d-none d-sm-table-cell">
-              <span class="badge bg-warning">Trial</span>
-            </td>
-            <td class="d-none d-sm-table-cell">
-                <span class="badge bg-success">VIP</span>
-              </td>
-            <td class="d-none d-sm-table-cell">
-                <span class="badge bg-info">Business</span>
-              </td>
-            <td class="text-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit">
-                  <i class="fa fa-pencil-alt"></i>
-                </button>
-                <button type="button" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete">
-                  <i class="fa fa-times"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-          
-          <tr>
-            <th class="text-center" scope="row">3</th>
-            <td class="fw-semibold">
-              <a href="be_pages_generic_profile.html">Albert Ray</a>
-            </td>
-            <td class="d-none d-sm-table-cell">
-              <span class="badge bg-danger">Disabled</span>
-            </td>
-            <td class="d-none d-sm-table-cell">
-                <span class="badge bg-success">VIP</span>
-              </td>
-            <td class="d-none d-sm-table-cell">
-                <span class="badge bg-info">Business</span>
-              </td>
-            <td class="text-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit">
-                  <i class="fa fa-pencil-alt"></i>
-                </button>
-                <button type="button" class="btn btn-sm btn-alt-secondary js-bs-tooltip-enabled" data-bs-toggle="tooltip" aria-label="Delete" data-bs-original-title="Delete">
-                  <i class="fa fa-times"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-        </div>
-        
-
-        
+          <!-- END Page Content -->
 
       </main>
       <!-- END Main Container -->
@@ -347,6 +277,12 @@
 
     <!-- Page JS Code -->
     <script src="assets/js/pages/be_pages_dashboard_v1.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/be_comp_dialogs.min.js"></script>
 
     <!-- Page JS Helpers (jQuery Sparkline plugin) -->
     <script>Dashmix.helpersOnLoad(['jq-sparkline']);</script>
